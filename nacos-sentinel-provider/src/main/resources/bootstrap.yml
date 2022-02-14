@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: nacos-sentinel-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 42.192.132.172:8848
+      config:
+        server-addr: 42.192.132.172:8848
+        file-extension: yaml
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+        datasource:
+          ds1:
+            nacos:
+              server-addr: 42.192.132.172:8848
+              dataId: nacos-sentinel-provider
+              groupId: DEFAULT_GROUP
+              data-type: json
+              rule-type: flow
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

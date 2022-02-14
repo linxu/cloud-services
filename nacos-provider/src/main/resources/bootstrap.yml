@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: nacos-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 42.192.132.172:8848
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

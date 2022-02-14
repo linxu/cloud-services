@@ -1,0 +1,33 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: eureka-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: eureka-provider
+          uri: lb://eureka-provider
+          predicates:
+            - Path=/test/**
+        - id: apple-store
+          uri: https://www.apple.com.cn/
+          predicates:
+            - Path=/apple
+          filters:
+            - Auth
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: eureka-gateway-8888
+    prefer-ip-address: true

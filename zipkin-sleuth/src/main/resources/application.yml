@@ -1,0 +1,11 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: zipkin-sleuth
+  zipkin:
+    base-url: http://42.192.132.172:9411
+  sleuth:
+    sampler:
+      probability: 1

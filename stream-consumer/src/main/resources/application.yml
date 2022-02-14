@@ -1,0 +1,24 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: stream-provider
+  cloud:
+    stream:
+      binders:
+        defaultRabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 42.192.132.172
+                port: 5672
+                username: admin
+                password: admin
+      bindings:
+        input:
+          destination: cloudExchange
+          content-type: application/json
+          binder: defaultRabbit
+          group: consumer

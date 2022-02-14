@@ -1,0 +1,36 @@
+server:
+  port: 3000
+
+spring:
+  application:
+    name: eureka-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/linxu/cloud-config.git
+          search-paths:
+            - cloud-config
+      label: master
+  rabbitmq:
+    host: 42.192.132.172
+    port: 5672
+    username: admin
+    password: admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#        include: "bus-refresh"
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: eureka-config-3000
+    prefer-ip-address: true

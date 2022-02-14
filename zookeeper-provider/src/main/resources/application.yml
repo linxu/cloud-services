@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: zookeeper-provider
+  cloud:
+    zookeeper:
+      connect-string: 42.192.132.172:2181

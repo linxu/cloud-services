@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: nacos-ribbon-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 42.192.132.172:8848
+      config:
+        server-addr: 42.192.132.172:8848
+        file-extension: yaml
+
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000

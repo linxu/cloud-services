@@ -1,0 +1,9 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: zookeeper-feign-consumer
+  cloud:
+    zookeeper:
+      connect-string: 42.192.132.172:2181
