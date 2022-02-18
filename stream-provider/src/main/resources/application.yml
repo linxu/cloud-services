@@ -7,17 +7,21 @@ spring:
   cloud:
     stream:
       binders:
-        defaultRabbit:
+        default_rabbit:
           type: rabbit
           environment:
             spring:
               rabbitmq:
-                host: 42.192.132.172
+                host: 127.0.0.1
                 port: 5672
-                username: admin
-                password: admin
+                username: guest
+                password: guest
       bindings:
-        output:
-          destination: cloudExchange
+        pay:
+          destination: pay.exchange
           content-type: application/json
-          binder: defaultRabbit
+          binder: default_rabbit
+        order:
+          destination: order.exchange
+          content-type: application/json
+          binder: default_rabbit
