@@ -49,7 +49,7 @@
 - zipkin
   - dashboard: http://xxxxxx:9411/zipkin
 
-##消息中间件
+## 消息中间件
 - Spring cloud stream
   - rabbitmq
   - kafka
