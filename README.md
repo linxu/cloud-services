@@ -44,6 +44,7 @@
 ## 服务配置
 - config(维护)
   - @EnableConfigServer
+  - @RefreshScope
   - 手动刷新配置: curl -X POST "http://xxxxxx/actuator/refresh"
   - 自动刷新配置(bus全局通知): curl -X POST "http://xxxxxx/actuator/bus-refresh"
   - 自动刷新配置(bus定点通知): curl -X POST "http://xxxxxx/actuator/bus-refresh/{name}:{port}"
