@@ -19,6 +19,7 @@
   - @LoadBalanced + RestTemplate
 - feign(维护)
 - open-feign
+  - @EnableFeignClients
   - @FeignClient
 
 ## 服务降级/熔断/限流/监控
