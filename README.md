@@ -28,6 +28,7 @@
   - @HystrixCommand
     - fallbackMethod 
 - Hystrix-Dashboard
+  - @EnableHystrixDashboard
 - resilence4j
 - sentinel
   - @SentinelResource
