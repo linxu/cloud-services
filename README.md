@@ -2,6 +2,7 @@
 
 ## 服务注册中心
 - eureka(维护)
+  - @EnableEurekaClient
   - 集群: 多个eureka配置双向注册
 - zookeeper
   - 启动: ./zkServer.sh start
