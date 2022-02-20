@@ -76,7 +76,7 @@
   - AUTO_INCREMENT
   - REPLACE INTO t_ids (service) value ('order')
 - Redis全局ID 唯一, 支持高并发, 需要集群
-  - INCR和INCRBY
+  - INCRBY
 - SnowFlake 唯一, 按时间递增
   - datacenterid
   - workerid
