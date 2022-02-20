@@ -6,10 +6,13 @@
   - @EnableEurekaClient
   - 集群: 多个eureka配置双向注册
 - zookeeper
+  - @EnableDiscoveryClient
   - 启动: ./zkServer.sh start
 - consul
+  - @EnableDiscoveryClient
   - 启动: ./consul agent -dev
 - nacos
+  - @EnableDiscoveryClient
 
 ## 服务调用
 - ribbon
@@ -36,6 +39,7 @@
 
 ## 服务配置
 - config(维护)
+  - @EnableConfigServer
   - 手动刷新配置: curl -X POST "http://xxxxxx/actuator/refresh"
   - 自动刷新配置(bus全局通知): curl -X POST "http://xxxxxx/actuator/bus-refresh"
   - 自动刷新配置(bus定点通知): curl -X POST "http://xxxxxx/actuator/bus-refresh/{name}:{port}"
