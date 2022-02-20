@@ -23,6 +23,8 @@
 
 ## 服务降级/熔断/限流/监控
 - Hystrix(维护)
+  - @EnableHystrix
+  - @EnableCircuitBreaker
   - @HystrixCommand
     - fallbackMethod 
 - Hystrix-Dashboard
