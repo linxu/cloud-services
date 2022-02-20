@@ -75,8 +75,10 @@
 - Mysql自增ID 唯一, 自增长, 不支持高并发
   - AUTO_INCREMENT
   - REPLACE INTO t_ids (service) value ('order')
-- Redis全局ID 唯一, 支持高并发, 需要集群
-  - INCRBY
+- Redis全局ID 唯一, 支持高并发
+  - 两台集群方式：
+  - INCRBY uuid 2
+  - INCRBY uuid 3
 - SnowFlake 唯一, 按时间递增
   - datacenterid
   - workerid
