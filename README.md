@@ -56,6 +56,7 @@
 - nacos
 
 ## 服务链路跟踪
+- SkyWalking
 - sleuth
 - zipkin
   - dashboard: http://xxxxxx:9411/zipkin
