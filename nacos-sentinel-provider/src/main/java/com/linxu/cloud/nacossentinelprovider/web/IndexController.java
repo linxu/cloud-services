@@ -31,4 +31,12 @@ public class IndexController {
         return "block";
     }
 
+    @GetMapping("/test2/{id}")
+    public String test2(@PathVariable int id) {
+        if (id < 0) {
+            throw new RuntimeException("test2");
+        }
+        return "hello world3";
+    }
+
 }

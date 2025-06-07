@@ -1,31 +1,44 @@
-server:
-  port: 8888
+#注释的内容保存在配置中心 nacos-sentinel-provider-dev.yaml
+#server:
+#  port: 8888
 
 spring:
+  profiles:
+    active: dev
   application:
     name: nacos-sentinel-provider
   cloud:
     nacos:
       discovery:
-        server-addr: 42.192.132.172:8848
+        server-addr: 127.0.0.1:8848
+#        namespace: dev
       config:
-        server-addr: 42.192.132.172:8848
+        server-addr: 127.0.0.1:8848
         file-extension: yaml
-    sentinel:
-      transport:
-        dashboard: localhost:8080
-        port: 8719
-        datasource:
-          ds1:
-            nacos:
-              server-addr: 42.192.132.172:8848
-              dataId: nacos-sentinel-provider
-              groupId: DEFAULT_GROUP
-              data-type: json
-              rule-type: flow
+#        namespace: dev
+#    sentinel:
+#      eager: true
+#      transport:
+#        dashboard: 127.0.0.1:8080
+#        port: 8719
+#      datasource:
+#        ds1:
+#          nacos:
+#            server-addr: 127.0.0.1:8848
+#            dataId: ${spring.application.name}-flow-rules
+#            groupId: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: flow
+#        ds2:
+#          nacos:
+#            server-addr: 127.0.0.1:8848
+#            dataId: ${spring.application.name}-degrade-rules
+#            groupId: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: degrade
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
